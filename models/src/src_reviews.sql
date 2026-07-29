@@ -1,5 +1,6 @@
 WITH RAW_REVIEWS AS(
-    SELECT * FROM AIRBNB_DBT.RAW.REVIEWS
+    SELECT * FROM 
+    {{ source('airbnb','raw_reviews') }}
 )
 SELECT
     LISTING_ID,
